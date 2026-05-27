@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="nf-edukit-systems — a systems repository for distributed educational servicing." />
+  <title>NF EDUKIT SYSTEMS</title>
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --panel: #fffdf8;
+      --text: #1d1d1b;
+      --muted: #5f5b52;
+      --line: #d8d2c7;
+      --accent: #2d4f6c;
+      --accent-soft: #e8eef3;
+      --shadow: 0 8px 28px rgba(20, 20, 20, 0.06);
+      --radius: 18px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(45, 79, 108, 0.06), transparent 28%),
+        radial-gradient(circle at top right, rgba(45, 79, 108, 0.05), transparent 20%),
+        var(--bg);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 20px 60px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-start;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 24px;
+    }
+
+    .brand {
+      display: grid;
+      gap: 8px;
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+      font-size: 0.92rem;
+    }
+
+    .site-nav a {
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.45);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.4fr 0.9fr;
+      gap: 18px;
+      margin: 10px 0 28px;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: rgba(255,255,255,0.68);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 28px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 3.6vw, 3.75rem);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+    }
+
+    .lede {
+      max-width: 60ch;
+      font-size: 1.04rem;
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+
+    .tagrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(45,79,108,0.12);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .hero-side {
+      padding: 22px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .meta-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .meta {
+      padding: 14px 15px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.8);
+      border: 1px solid var(--line);
+    }
+
+    .meta-label {
+      display: block;
+      font-size: 0.74rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    .meta-value { font-weight: 650; }
+
+    .section {
+      margin-top: 22px;
+      padding: 22px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 52ch;
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+
+    .card {
+      grid-column: span 4;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      min-height: 100%;
+    }
+
+    .card.wide { grid-column: span 6; }
+    .card.full { grid-column: 1 / -1; }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.04rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .mini {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .mini span {
+      padding: 5px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+    }
+
+    ul.clean {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    ul.clean li {
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.76);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .note-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .note-list p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .footer {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footlinks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footlinks a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 920px) {
+      .hero, .two-col { grid-template-columns: 1fr; }
+      .card, .card.wide { grid-column: 1 / -1; }
+      .topbar { flex-direction: column; }
+      .site-nav { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <div class="eyebrow">Norman Fellows · Speculative infrastructure research</div>
+        <div style="font-size:0.95rem;color:var(--muted)">nf-edukit-systems · GitHub Pages landing page</div>
+      </div>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#systems">Systems</a>
+        <a href="#series">Series</a>
+        <a href="#territories">Territories</a>
+        <a href="#timelines">Timelines</a>
+        <a href="#catalogue">Catalogue</a>
+        <a href="#notes">Notes</a>
+        <a href="#links">Links</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="panel hero-main">
+          <div class="eyebrow">Repository</div>
+          <h1>NF EDUKIT SYSTEMS</h1>
+          <p class="lede">
+            A systems repository for distributed educational servicing, developed from Edukit,
+            Thinkbelt, Atom, and related work on anticipatory infrastructure, commons governance,
+            and kit-of-parts educational environments.
+          </p>
+          <p class="lede">
+            The page is intentionally minimal: an index, a navigation surface, and a stable frame
+            for future entries, diagrams, and catalogue objects.
+          </p>
+          <div class="tagrow" aria-label="Repository themes">
+            <span class="tag">Educational servicing</span>
+            <span class="tag">Commons</span>
+            <span class="tag">Systems index</span>
+            <span class="tag">Catalogue logic</span>
+            <span class="tag">Temporal structures</span>
+          </div>
+        </div>
+
+        <aside class="panel hero-side">
+          <div class="meta-grid">
+            <div class="meta">
+              <span class="meta-label">Status</span>
+              <span class="meta-value">Provisional / Active / Building</span>
+            </div>
+            <div class="meta">
+              <span class="meta-label">Type</span>
+              <span class="meta-value">HTML / CSS / Notes / Archive / Diagrams</span>
+            </div>
+            <div class="meta">
+              <span class="meta-label">Scope</span>
+              <span class="meta-value">Systems repository for Edukit</span>
+            </div>
+            <div class="meta">
+              <span class="meta-label">Updated</span>
+              <span class="meta-value">May 2026</span>
+            </div>
+            <div class="meta">
+              <span class="meta-label">Access</span>
+              <span class="meta-value">Public</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="systems" class="panel section">
+        <div class="section-head">
+          <h2>Systems</h2>
+          <p>Top-level entities and infrastructural frameworks.</p>
+        </div>
+        <div class="grid">
+          <article class="card wide">
+            <h3>Edukit</h3>
+            <p>A distributed educational servicing system conceived as a metasystem rather than a single project.</p>
+            <div class="mini"><span>Metasystem</span><span>Commons</span><span>Servicing</span></div>
+          </article>
+          <article class="card wide">
+            <h3>Thinkbelts</h3>
+            <p>Regional educational infrastructure and a precursor logic for distributed learning environments.</p>
+            <div class="mini"><span>Regional</span><span>Precursor</span><span>Infrastructure</span></div>
+          </article>
+          <article class="card wide">
+            <h3>Atoms</h3>
+            <p>Distributed educational nodes linking local provision, communications, and spatial dispersion.</p>
+            <div class="mini"><span>Distributed</span><span>Node</span><span>Communication</span></div>
+          </article>
+          <article class="card wide">
+            <h3>CAMKOX</h3>
+            <p>A territorial and governance frame for educational servicing across the Cambridge–Milton Keynes–Oxford region.</p>
+            <div class="mini"><span>Territory</span><span>Governance</span><span>Region</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="series" class="panel section">
+        <div class="section-head">
+          <h2>Series</h2>
+          <p>Component families for a kit-of-parts educational system.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>Soft Series</h3>
+            <p>Communications, monitoring, records, grids, and information exchange.</p>
+          </article>
+          <article class="card">
+            <h3>Mobile Series</h3>
+            <p>Transport, deployment, temporary occupation, and field servicing.</p>
+          </article>
+          <article class="card">
+            <h3>Hard Series</h3>
+            <p>Physical enclosure, environmental systems, and servicing hardware.</p>
+          </article>
+          <article class="card full">
+            <h3>General Series</h3>
+            <p>Social infrastructure, food, games, and supporting systems that widen educational access and pleasure.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="territories" class="panel section">
+        <div class="section-head">
+          <h2>Territories</h2>
+          <p>Geographies of educational servicing and regional transformation.</p>
+        </div>
+        <div class="two-col">
+          <article class="card full">
+            <h3>Regional contexts</h3>
+            <p>
+              Potteries, Dukeries, Atomia, Cambridge–Milton Keynes, Oxford, CAMKOX, and the wider question of global imbalance in educational provision.
+            </p>
+          </article>
+          <article class="card full">
+            <h3>Territorial logic</h3>
+            <p>
+              The repository treats territory as a service condition: not merely location, but a field for distribution, access, and infrastructural change.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="timelines" class="panel section">
+        <div class="section-head">
+          <h2>Timelines</h2>
+          <p>Life cycles, anticipation, inheritance, and recursive development.</p>
+        </div>
+        <div class="grid">
+          <article class="card wide">
+            <h3>1964 → 1968</h3>
+            <p>Potteries Thinkbelt and Atom US establish early models for educational servicing beyond the conventional university.</p>
+          </article>
+          <article class="card wide">
+            <h3>1996 → present</h3>
+            <p>Edukit develops as a continuing work in progress, with the repository acting as a living index.</p>
+          </article>
+          <article class="card wide">
+            <h3>2014 → present</h3>
+            <p>Dukeries Thinkbelt and Atom UK extend the logic into later regional and territorial studies.</p>
+          </article>
+          <article class="card wide">
+            <h3>Use cycle</h3>
+            <p>Obsolescence, adaptation, removal, and replacement are treated as design conditions rather than failures.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="catalogue" class="panel section">
+        <div class="section-head">
+          <h2>Catalogue</h2>
+          <p>Reusable entries for future expansion of the repository.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>Monitoring Module</h3>
+            <p>Basic element for home, teaching, and diagnostic use.</p>
+          </article>
+          <article class="card">
+            <h3>Information Kiosk</h3>
+            <p>Public access point for preventive and distributed service.</p>
+          </article>
+          <article class="card">
+            <h3>Mobile Office</h3>
+            <p>Temporary working enclosure for teaching, administration, and field deployment.</p>
+          </article>
+          <article class="card">
+            <h3>Transporter Unit</h3>
+            <p>Logistical carrier for systems, teams, and equipment.</p>
+          </article>
+          <article class="card">
+            <h3>Powered Wall Panel</h3>
+            <p>Hard-series element for environmental and spatial servicing.</p>
+          </article>
+          <article class="card">
+            <h3>Educational Games</h3>
+            <p>General-series support for learning, pleasure, and distributed engagement.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="notes" class="panel section">
+        <div class="section-head">
+          <h2>Notes</h2>
+          <p>Purpose, method, and relation to the wider site.</p>
+        </div>
+        <div class="note-list">
+          <p><strong>Purpose.</strong> To provide a stable entry point into the Edukit systems repository.</p>
+          <p><strong>Method.</strong> To foreground relations between systems, series, territories, timelines, and catalogue entries.</p>
+          <p><strong>Relation to the wider site.</strong> To sit alongside the Norman Fellows landing page and the wider body of repositories as a distinct systems node.</p>
+        </div>
+      </section>
+
+      <section id="links" class="panel section">
+        <div class="section-head">
+          <h2>Links</h2>
+          <p>Core connections for repository growth.</p>
+        </div>
+        <div class="grid">
+          <article class="card wide">
+            <h3>README</h3>
+            <p>Add the main documentation here once the repository structure is finalised.</p>
+          </article>
+          <article class="card wide">
+            <h3>Related pages</h3>
+            <p>Link to adjacent repositories, system pages, timelines, and diagrams as they are created.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>Norman Fellows · nf-edukit-systems</div>
+      <div class="footlinks">
+        <a href="#systems">Systems</a>
+        <a href="#catalogue">Catalogue</a>
+        <a href="#notes">Notes</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
