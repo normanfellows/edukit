@@ -6,10 +6,15 @@ Overview
 Historical context
 
 Systems structure
+
 Series structure
+
 Territories
+
 Timeline
+
 Research significance
+
 References
 
 [Visit Norman Fellows Website](https://normanfellows.github.io)
