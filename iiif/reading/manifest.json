@@ -1,0 +1,119 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://normanfellows.github.io/edukit/iiif/reading/manifest.json",
+  "type": "Manifest",
+  "label": {
+    "en": [
+      "Reading Edukit: A Proposition in Formation"
+    ]
+  },
+  "summary": {
+    "en": [
+      "A research arrangement of Edukit archival items for comparative close reading. The manifest is not intended as a catalogue or chronological presentation of the project, but as an experimental environment for examining documentary traces of a proposition in formation."
+    ]
+  },
+  "metadata": [
+    {
+      "label": {
+        "en": [
+          "Experiment"
+        ]
+      },
+      "value": {
+        "en": [
+          "Experiment 02 — Reading Edukit"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Method"
+        ]
+      },
+      "value": {
+        "en": [
+          "Comparative close reading of documentary traces"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Research question"
+        ]
+      },
+      "value": {
+        "en": [
+          "What happens to the systems image when it is placed in a field of antecedents?"
+        ]
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "https://normanfellows.github.io/edukit/iiif/reading/canvas/item_00002",
+      "type": "Canvas",
+      "label": {
+        "en": [
+          "item_00002 — Edukit systems diagram (incomplete)"
+        ]
+      },
+      "height": 344,
+      "width": 800,
+      "items": [
+        {
+          "id": "https://normanfellows.github.io/edukit/iiif/reading/page/item_00002",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://normanfellows.github.io/edukit/iiif/reading/annotation/item_00002",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://normanfellows.github.io/edukit/iiif/reading/images/item_00002.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 344,
+                "width": 800
+              },
+              "target": "https://normanfellows.github.io/edukit/iiif/reading/canvas/item_00002"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://normanfellows.github.io/edukit/iiif/reading/canvas/item_00151",
+      "type": "Canvas",
+      "label": {
+        "en": [
+          "item_00151 — Edukit propositions spread"
+        ]
+      },
+      "height": 513,
+      "width": 800,
+      "items": [
+        {
+          "id": "https://normanfellows.github.io/edukit/iiif/reading/page/item_00151",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://normanfellows.github.io/edukit/iiif/reading/annotation/item_00151",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://normanfellows.github.io/edukit/iiif/reading/images/item_00151.png",
+                "type": "Image",
+                "format": "image/png",
+                "height": 513,
+                "width": 800
+              },
+              "target": "https://normanfellows.github.io/edukit/iiif/reading/canvas/item_00151"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
