@@ -55,7 +55,7 @@
   "seeAlso": [
     {
       "id": "https://normanfellows.github.io/edukit/iiif/reading/findings/finding-01.md",
-      "type": "Text",
+      "type": "Dataset",
       "format": "text/markdown",
       "label": {
         "en": [
