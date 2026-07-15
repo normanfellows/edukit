@@ -113,6 +113,26 @@
             }
           ]
         }
+      ],
+      "annotations": [
+        {
+          "id": "https://normanfellows.github.io/edukit/iiif/reading/annotation-page/item_00151-research",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://normanfellows.github.io/edukit/iiif/reading/annotation/item_00151-comparative-reading-01",
+              "type": "Annotation",
+              "motivation": "commenting",
+              "body": {
+                "type": "TextualBody",
+                "value": "The Edukit systems image is repeated here within a field of earlier documentary material concerned with links, communication and distributed access. The juxtaposition invites comparison between the earlier communications logic and its apparent rescaling within Edukit.",
+                "format": "text/plain",
+                "language": "en"
+              },
+              "target": "https://normanfellows.github.io/edukit/iiif/reading/canvas/item_00151#xywh=47,119,354,175"
+            }
+          ]
+        }
       ]
     }
   ]
