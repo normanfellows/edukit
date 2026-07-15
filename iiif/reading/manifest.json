@@ -50,21 +50,6 @@
       }
     }
   ],
-      }
-  ],
-  "seeAlso": [
-    {
-      "id": "https://normanfellows.github.io/edukit/iiif/reading/findings/finding-01.md",
-      "type": "Dataset",
-      "format": "text/markdown",
-      "label": {
-        "en": [
-          "Finding 01 — The Available Position"
-        ]
-      }
-    }
-  ],
-  "items": [
   "items": [
     {
       "id": "https://normanfellows.github.io/edukit/iiif/reading/canvas/item_00002",
