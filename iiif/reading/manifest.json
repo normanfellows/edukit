@@ -67,7 +67,7 @@
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://normanfellows.github.io/edukit/iiif/reading/annotation/item_00002",
+              "id": "https://normanfellows.github.io/edukit/iiif/reading/annotation/item_00002-image",
               "type": "Annotation",
               "motivation": "painting",
               "body": {
@@ -91,23 +91,23 @@
           "item_00151 — Edukit propositions spread"
         ]
       },
-      "height": 513,
-      "width": 800,
+      "height": 1040,
+      "width": 1600,
       "items": [
         {
           "id": "https://normanfellows.github.io/edukit/iiif/reading/page/item_00151",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://normanfellows.github.io/edukit/iiif/reading/annotation/item_00151",
+              "id": "https://normanfellows.github.io/edukit/iiif/reading/annotation/item_00151-image",
               "type": "Annotation",
               "motivation": "painting",
               "body": {
                 "id": "https://normanfellows.github.io/edukit/iiif/reading/images/item_00151.png",
                 "type": "Image",
                 "format": "image/png",
-                "height": 513,
-                "width": 800
+                "height": 1040,
+                "width": 1600
               },
               "target": "https://normanfellows.github.io/edukit/iiif/reading/canvas/item_00151"
             }
@@ -116,24 +116,68 @@
       ],
       "annotations": [
         {
-          "id": "https://normanfellows.github.io/edukit/iiif/reading/annotation-page/item_00151-research",
+          "id": "https://normanfellows.github.io/edukit/iiif/reading/annotations/item_00151-och",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://normanfellows.github.io/edukit/iiif/reading/annotation/item_00151-comparative-reading-01",
+              "id": "https://normanfellows.github.io/edukit/iiif/reading/annotation/och-01",
               "type": "Annotation",
               "motivation": "commenting",
               "body": {
                 "type": "TextualBody",
-                "value": "O — Observation: The Edukit systems image is repeated within a spread containing earlier documentary material explicitly concerned with links, two-way communication, specialist connection and group organisation.\n\nC — Comparison: The juxtaposition invites comparison between the communications logic represented in the earlier material and the Edukit systems image.\n\nH — Hypothesis: Edukit may represent a rescaling of an earlier communications logic from facility to planetary system.",
+                "value": "O — Observation: The Edukit systems image is repeated here within a spread containing earlier documentary material explicitly concerned with links, two-way communication, specialist connection and group organisation. C — Comparison: The juxtaposition invites comparison between the communications logic represented in the earlier material and the Edukit systems image. H — Hypothesis: Edukit may represent a rescaling of an earlier communications logic from facility to planetary system.",
                 "format": "text/plain",
                 "language": "en"
               },
-              "target": "https://normanfellows.github.io/edukit/iiif/reading/canvas/item_00151#xywh=47,119,354,175"
+              "target": "https://normanfellows.github.io/edukit/iiif/reading/canvas/item_00151#xywh=90,170,650,320"
             }
           ]
         }
       ]
+    },
+    {
+      "id": "https://normanfellows.github.io/edukit/iiif/reading/canvas/item_00148",
+      "type": "Canvas",
+      "label": {
+        "en": [
+          "item_00148 — AD cover anticipating publication"
+        ]
+      },
+      "height": 765,
+      "width": 596,
+      "items": [
+        {
+          "id": "https://normanfellows.github.io/edukit/iiif/reading/page/item_00148",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://normanfellows.github.io/edukit/iiif/reading/annotation/item_00148-image",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://normanfellows.github.io/edukit/iiif/reading/images/item_00148.png",
+                "type": "Image",
+                "format": "image/png",
+                "height": 765,
+                "width": 596
+              },
+              "target": "https://normanfellows.github.io/edukit/iiif/reading/canvas/item_00148"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "homepage": [
+    {
+      "id": "https://normanfellows.github.io/edukit/iiif/reading/manifest.json",
+      "type": "Text",
+      "label": {
+        "en": [
+          "IIIF manifest"
+        ]
+      },
+      "format": "application/json"
     }
   ]
 }
