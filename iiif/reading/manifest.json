@@ -45,7 +45,7 @@
       },
       "value": {
         "en": [
-          "What happens to the systems image when it is placed in a field of antecedents?"
+          "How might documentary arrangement, maker recollection and comparison reveal the formation of the Edukit proposition?"
         ]
       }
     }
@@ -91,8 +91,8 @@
           "item_00151 — Edukit propositions spread"
         ]
       },
-      "height": 1040,
-      "width": 1600,
+      "height": 513,
+      "width": 800,
       "items": [
         {
           "id": "https://normanfellows.github.io/edukit/iiif/reading/page/item_00151",
@@ -106,8 +106,8 @@
                 "id": "https://normanfellows.github.io/edukit/iiif/reading/images/item_00151.png",
                 "type": "Image",
                 "format": "image/png",
-                "height": 1040,
-                "width": 1600
+                "height": 513,
+                "width": 800
               },
               "target": "https://normanfellows.github.io/edukit/iiif/reading/canvas/item_00151"
             }
@@ -116,20 +116,20 @@
       ],
       "annotations": [
         {
-          "id": "https://normanfellows.github.io/edukit/iiif/reading/annotations/item_00151-och",
+          "id": "https://normanfellows.github.io/edukit/iiif/reading/annotation-page/item_00151-research",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://normanfellows.github.io/edukit/iiif/reading/annotation/och-01",
+              "id": "https://normanfellows.github.io/edukit/iiif/reading/annotation/item_00151-comparative-reading-01",
               "type": "Annotation",
               "motivation": "commenting",
               "body": {
                 "type": "TextualBody",
-                "value": "O — Observation: The Edukit systems image is repeated here within a spread containing earlier documentary material explicitly concerned with links, two-way communication, specialist connection and group organisation. C — Comparison: The juxtaposition invites comparison between the communications logic represented in the earlier material and the Edukit systems image. H — Hypothesis: Edukit may represent a rescaling of an earlier communications logic from facility to planetary system.",
+                "value": "O — Observation: The Edukit systems image is repeated within a spread containing earlier documentary material explicitly concerned with links, two-way communication, specialist connection and group organisation.\n\nC — Comparison: The juxtaposition invites comparison between the communications logic represented in the earlier material and the Edukit systems image.\n\nH — Hypothesis: Edukit may represent a rescaling of an earlier communications logic from facility to planetary system.",
                 "format": "text/plain",
                 "language": "en"
               },
-              "target": "https://normanfellows.github.io/edukit/iiif/reading/canvas/item_00151#xywh=90,170,650,320"
+              "target": "https://normanfellows.github.io/edukit/iiif/reading/canvas/item_00151#xywh=47,119,354,175"
             }
           ]
         }
@@ -165,19 +165,27 @@
             }
           ]
         }
+      ],
+      "annotations": [
+        {
+          "id": "https://normanfellows.github.io/edukit/iiif/reading/annotation-page/item_00148-orch",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://normanfellows.github.io/edukit/iiif/reading/annotation/orch-02",
+              "type": "Annotation",
+              "motivation": "commenting",
+              "body": {
+                "type": "TextualBody",
+                "value": "O — Observation: The Edukit Fantasia cover is organised as twenty-four cells in six rows of four and is intended to represent a whole system “at a glance”. At this documentary state a number of cells remain black or white blanks.\n\nR — Recollection: NF recalls these as unfinished but available positions awaiting conceptually appropriate images. The predominant colour arrangement was inherited from Medikit Fantasia and treated as sacrosanct. Red, purple and green carried broad associations with Hard, Soft/Electronic and Mobile systems respectively, although these associations could not be applied strictly. Some conceptually appropriate images were chromatically altered to negotiate their placement within the predetermined arrangement, and occasional artistic licence was used.\n\nC — Comparison: In the interview with Cedric Price at 38 Alfred Place on 23 July 1996, Price proposed an ordering on one sheet in which “big blanks” could remain because “something's gonna happen there, but I don't know”, enabling another participant to propose “that blank I'd put this”. NF characterised the procedure as “a game”; Price agreed and subsequently described it as “a useful tool”. NF recalls never forgetting this exchange and being consciously aware of the significance of twenty-four blanks when beginning Edukit Fantasia.\n\nH — Hypothesis: The blank cells of Edukit Fantasia may operate as rule-governed available positions rather than absences. New material enters the field through a negotiation between conceptual appropriateness and an inherited visual order whose colours carry broad system associations without functioning as a strict classificatory code. Edukit's formation may therefore be read as a process in which new content is accommodated, transformed, or exceptionally privileged within a retained ordering structure.",
+                "format": "text/plain",
+                "language": "en"
+              },
+              "target": "https://normanfellows.github.io/edukit/iiif/reading/canvas/item_00148#xywh=0,160,596,605"
+            }
+          ]
+        }
       ]
-    }
-  ],
-  "homepage": [
-    {
-      "id": "https://normanfellows.github.io/edukit/iiif/reading/manifest.json",
-      "type": "Text",
-      "label": {
-        "en": [
-          "IIIF manifest"
-        ]
-      },
-      "format": "application/json"
     }
   ]
 }
